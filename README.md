@@ -22,9 +22,9 @@ After the installation, the first LED will indicate if the system is up using le
 Insert these lines to /etc/rc.local just above exit 0:
 
 ```
-echo timer > /sys/class/leds/apu\:1/trigger
-echo 1750 > /sys/class/leds/apu:\1/delay_on
-echo 250 >  /sys/class/leds/apu\:1/delay_off
+echo "timer" > /sys/class/leds/apu\:1/trigger
+echo "1750" > /sys/class/leds/apu:\1/delay_on
+echo "250" > /sys/class/leds/apu\:1/delay_off
 /usr/local/sbin/apuled eth1 -c nrt -f
 /usr/local/sbin/apubutton&
 ```
