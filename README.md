@@ -32,7 +32,7 @@ echo 250 >  /sys/class/leds/apu\:1/delay_off
 ...and reboot.
 
 ## License
-* Copyright (c) 2014, Mark Schank
-* Copyright (C) 2013, Christian Herzog
+* Copyright &copy; 2014, Mark Schank
+* Copyright &copy; 2013, Christian Herzog
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 2 as published by the Free Software Foundation.
