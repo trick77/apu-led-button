@@ -7,7 +7,7 @@ After the installation, the first LED will indicate if the system is up using le
 ## Installation
 
 ```
-# sudo apt-get install linux-headers-$(uname -r) build-essentials
+# sudo apt-get install linux-headers-$(uname -r) build-essential
 # sudo git clone https://github.com/trick77/apu-led-button
 # cd apu-led-button
 # make && sudo make install
