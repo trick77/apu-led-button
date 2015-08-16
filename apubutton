@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+while [ true ]
+do
+if [ "$(cat /sys/class/gpio/gpio187/value)" == '0' ]
+then
+    logger "APU restart button pressed..."
+    if hash beep 2>/dev/null; then
+	modprobe pcspkr
+        beep
+    fi
+    shutdown -r now
+    exit 0
+fi
+sleep 1
+done
