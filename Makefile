@@ -21,7 +21,7 @@ SOURCE = $(subst .o,.c,$(obj-m))
 MODULE = $(subst .o,.ko,$(obj-m))
 
 all: $(MODULE)
-	gcc -o apuled apuled.c
+	gcc -Wformat=0 -o apuled apuled.c
 
 $(MODULE): $(SOURCE)
 	$(MAKE) -C $(KERNEL_DIR) SUBDIRS=$(PWD) modules
