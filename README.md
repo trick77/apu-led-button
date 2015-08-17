@@ -2,7 +2,7 @@
 
 Linux kernel module for PC Engine's APU system board to access the three front LEDs and the reset button. Originally published [here](http://daduke.org/linux/apu/) but slightly modified for Ubuntu Server 14.04 and newer. 
 
-After the installation, the first LED will indicate if the system is up using ledtrig-timer. You could also use ledtrig-heartbeat instead if you like a more active status LED. The second and third LED will act as RX/TX indicators for the network port of your choice. The configuration sample below uses eth1 because it's the WAN port in my setup. Additionally, pressing the front reset button for at least a second will issue a beep and soft-reboot the APU.
+After the installation, the first LED will indicate if the system is up using ledtrig-timer. You could also use ledtrig-heartbeat instead if you prefer a more active status LED. The second and third LED will act as RX/TX indicators for the network port of your choice. The configuration sample below uses eth1 because it's the WAN port in my setup. Additionally, pressing the front reset button for at least a second will issue a beep and soft-reboot the APU.
 
 ## Installation
 
