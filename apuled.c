@@ -112,12 +112,12 @@ void update_netproc(char *interface) {
 		if (strncmp(bp,interface,strlen(interface)) == 0 && *(bp+strlen(interface)) == ':' ) {
 			bp = bp+strlen(interface)+1;
 			if (options & OPT_KERNEL_2_0)
-				sscanf(bp,"%lu %lu %lu %c %c %lu %lu %lu %c %lu",
+				sscanf(bp,"%lu %lu %lu %lu %lu %lu %lu %lu %lu %lu",
 						&if_info[IF_RX],&if_info[IF_ERR_RX],&if_info[IF_DROP_RX],
 						&dummy,&dummy,&if_info[IF_TX],&if_info[IF_ERR_TX],
 						&if_info[IF_DROP_TX],&dummy,&if_info[IF_COLL]);
 			else
-				sscanf(bp,"%lu %c %lu %lu %c %c %c %c %lu %c %lu %lu %c %lu",
+				sscanf(bp,"%lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu",
 						&if_info[IF_RX],&dummy,&if_info[IF_ERR_RX],&if_info[IF_DROP_RX],
 						&dummy,&dummy,&dummy,&dummy,&if_info[IF_TX],&dummy,
 						&if_info[IF_ERR_TX],&if_info[IF_DROP_TX],&dummy,&if_info[IF_COLL]);
@@ -243,7 +243,7 @@ int main(int argc, char *argv[]) {
 
 	while(1) {
 		#if DEBUG
-		printf("tx:%d rx:%d coll:%d tx_drop:%d rx_drop:%d err_tx:%d err_rx:%d\n",
+		printf("tx:%lu rx:%lu coll:%lu tx_drop:%lu rx_drop:%lu err_tx:%lu err_rx:%lu\n",
 				if_info[IF_TX],if_info[IF_RX],if_info[IF_COLL],if_info[IF_DROP_TX],
 				if_info[IF_DROP_RX],if_info[IF_ERR_TX],if_info[IF_ERR_RX]);
 		#endif
