@@ -4,6 +4,8 @@ Linux kernel module for PC Engine's APU system board to access the three front L
 
 After the installation, the first LED will indicate if the system is up using ledtrig-timer. You could also use ledtrig-heartbeat instead if you prefer a more active status LED. The second and third LED will act as RX/TX indicators for the network port of your choice. The configuration sample below uses eth1 because it's the WAN port in my setup. Additionally, pressing the front reset button for at least a second will issue a beep and soft-reboot the APU.
 
+See [here for more trips and tricks for the APU](https://trick77.com/tips-tricks-for-the-pc-engines-apu/).
+
 ## Installation
 
 ```
