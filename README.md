@@ -16,8 +16,11 @@ After the installation, the first LED will indicate if the system is up using le
 (as root)
 ```
 # echo "ledtrig-timer" >> /etc/modules
+# echo "ledtrig-heartbeat" >> /etc/modules
 # echo "apuled-button" >> /etc/modules
 ```
+
+## Sample configuration
 
 Insert these lines to /etc/rc.local just above exit 0:
 
@@ -30,6 +33,13 @@ echo "250" > /sys/class/leds/apu\:1/delay_off
 ```
 
 ...and reboot.
+
+The LEDs trigger capabilities are listed in <code>/sys/class/leds/apu\:1/trigger</code> with the currently active trigger marked in brackets.
+
+<pre>
+# cat /sys/class/leds/apu\:1/trigger
+none usb-gadget usb-host cpu0 cpu1 [timer] rfkill0 phy0rx phy0tx phy0assoc phy0radio phy0tpt heartbeat
+</pre>
 
 ## License
 * Copyright &copy; 2014, Mark Schank
